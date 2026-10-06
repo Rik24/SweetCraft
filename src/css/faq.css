@@ -1,0 +1,36 @@
+/* Accordion styles */
+.faq-ac {
+  border-top: 2px solid #000;
+}
+.faq-ac:last-child {
+  border-bottom: 2px solid #000;
+}
+.faq-ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+}
+
+.faq-ac-trigger {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-ac-trigger svg {
+  flex-shrink: 0;
+  transition: transform 300ms ease;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+
+.faq-ac.is-active .faq-ac-trigger svg {
+  transform: rotate(180deg);
+}
+/* Accordion styles */

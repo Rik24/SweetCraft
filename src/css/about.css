@@ -1,0 +1,54 @@
+.about-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #080c0c;
+
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #080c0c;
+  margin-bottom: 40px;
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-image {
+  border-radius: 16px;
+  width: 335px;
+  height: 248px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list {
+    flex-direction: row;
+  }
+
+  .about-image {
+    width: 340px;
+    height: 252px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-title {
+    font-size: 48px;
+  }
+
+  .about-image {
+    width: 644px;
+    height: 478px;
+  }
+}

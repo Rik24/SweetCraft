@@ -1,54 +1,284 @@
-.about-title {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 120%;
-  letter-spacing: -0.01em;
-  text-align: center;
-  color: #080c0c;
+/* ========================================
+   ABOUT US
+   ======================================== */
 
-  margin-bottom: 24px;
+.about-us {
+  overflow: hidden;
 }
 
-.about-text {
-  font-family: 'Nunito', sans-serif;
+/* ========================================
+   HEADER
+   ======================================== */
+
+.about-us__header {
+  width: 100%;
+  max-width: 768px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.about-us__title {
+  margin: 0 0 24px;
+}
+
+.about-us__description {
+  margin: 0;
+
+  font-family: var(--font-family);
   font-size: 18px;
-  line-height: 150%;
-  text-align: center;
-  color: #080c0c;
-  margin-bottom: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--color-scheme-1-text);
 }
 
-.about-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+/* ========================================
+   SLIDER
+   ======================================== */
+
+.about-us__slider {
+  position: relative;
+
+  width: 100%;
+  margin: 0 auto;
 }
 
-.about-image {
+.about-us__swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-us__slide {
+  overflow: hidden;
+
   border-radius: 16px;
-  width: 335px;
-  height: 248px;
 }
 
-@media screen and (min-width: 768px) {
-  .about-list {
-    flex-direction: row;
+.about-us__slide picture {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.about-us__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media only screen and (max-width: 767px) {
+  .about-us__swiper {
+    overflow: visible;
   }
 
-  .about-image {
+  .about-us__swiper .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    transform: none !important;
+  }
+
+  .about-us__swiper .swiper-slide {
+    width: 335px !important;
+    height: 248px;
+
+    flex-shrink: 0;
+  }
+
+  .about-us__image {
+    width: 335px;
+    height: 248px;
+  }
+
+  /* На mobile стрелок нет */
+  .about-us__button {
+    display: none;
+  }
+
+  /* На mobile pagination нет */
+  .about-us__pagination {
+    display: none;
+  }
+}
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media only screen and (min-width: 768px) {
+  .about-us__swiper {
+    overflow: hidden;
+  }
+
+  .about-us__swiper .swiper-slide {
+    width: 340px !important;
+    height: 252px;
+  }
+
+  .about-us__image {
     width: 340px;
     height: 252px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .about-title {
-    font-size: 48px;
+  /* ======================================
+     BUTTONS
+     ====================================== */
+
+  .about-us__button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: 1px solid var(--color-neutral-darkest);
+    border-radius: 50%;
+
+    background-color: var(--color-scheme-1-background);
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease;
   }
 
-  .about-image {
+  .about-us__button--prev {
+    left: -20px;
+  }
+
+  .about-us__button--next {
+    right: -20px;
+  }
+
+  /* ======================================
+     ARROWS
+     ====================================== */
+
+  .about-us__arrow {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    fill: none;
+    stroke: var(--color-neutral-darkest);
+
+    transition: stroke 250ms ease;
+  }
+
+  /* ======================================
+     HOVER
+     ====================================== */
+
+  .about-us__button:hover:not(:disabled),
+  .about-us__button:focus-visible:not(:disabled) {
+    background-color: var(--color-wewak);
+  }
+
+  .about-us__button:hover:not(:disabled) .about-us__arrow,
+  .about-us__button:focus-visible:not(:disabled) .about-us__arrow {
+    stroke: var(--color-neutral-darkest);
+  }
+
+  /* ======================================
+     DISABLED
+     ====================================== */
+
+  .about-us__button:disabled {
+    border-color: var(--color-neutral-light);
+
+    background-color: var(--color-scheme-1-background);
+
+    cursor: default;
+  }
+
+  .about-us__button:disabled .about-us__arrow {
+    stroke: var(--color-neutral-light);
+  }
+
+  /* ======================================
+     PAGINATION
+     ====================================== */
+
+  .about-us__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 24px;
+  }
+
+  .about-us__pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+
+    margin: 0 !important;
+
+    border-radius: 50%;
+
+    background-color: var(--color-neutral-darkest);
+
+    opacity: 0.3;
+
+    cursor: pointer;
+
+    transition:
+      opacity 250ms ease,
+      transform 250ms ease;
+  }
+
+  .about-us__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+
+    transform: scale(1.2);
+  }
+}
+
+/* ========================================
+   DESKTOP
+   ======================================== */
+
+@media only screen and (min-width: 1440px) {
+  .about-us__swiper .swiper-slide {
+    width: 644px !important;
+    height: 478px;
+  }
+
+  .about-us__image {
     width: 644px;
     height: 478px;
+  }
+
+  .about-us__button--prev {
+    left: -20px;
+  }
+
+  .about-us__button--next {
+    right: -20px;
   }
 }

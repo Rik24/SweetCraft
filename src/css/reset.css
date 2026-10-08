@@ -24,10 +24,20 @@ a {
 }
 
 button {
+  padding: 0;
+  line-height: 0;
+  color: inherit;
+  border: none;
   cursor: pointer;
 }
 
-img {
+input,
+textarea {
+  outline: none;
+}
+
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;

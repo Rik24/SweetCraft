@@ -24,3 +24,5 @@
 /* Modal styles */
 @import url('./dessert-details-modal.css');
 @import url('./order-modal.css');
+
+@import url('./mobile-menu.css');

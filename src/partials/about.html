@@ -1,23 +1,170 @@
-<section class="about-us container">
-  <h2 class="about-title">Про нас</h2>
-  <p class="about-text">
-    У нашій 'Солодкій Майстерні' ми створюємо неповторні солодкі шедеври, що
-    приносять радість та задоволення. Наша місія — пропонувати високоякісні
-    десерти, які поєднують у собі вишуканий смак, свіжі інгредієнти та
-    естетичний вигляд.
-  </p>
-  <ul class="about-list">
-    <li class="about-list-item">
-      <img class="about-image" src="" alt="" />
-    </li>
-    <li class="about-list-item">
-      <img class="about-image" src="" alt="" />
-    </li>
-    <li class="about-list-item">
-      <img class="about-image" src="" alt="" />
-    </li>
-    <li class="about-list-item">
-      <img class="about-image" src="" alt="" />
-    </li>
-  </ul>
+<section class="about-us section">
+  <div class="container">
+    <div class="about-us__header">
+      <h2 class="about-us__title section-title">Про нас</h2>
+
+      <p class="about-us__description">
+        У нашій «Солодкій Майстерні» ми створюємо неповторні солодкі шедеври, що
+        приносять радість та задоволення. Наша місія — пропонувати високоякісні
+        десерти, які поєднують у собі вишуканий смак, яскраві інгредієнти та
+        естетичний вигляд.
+      </p>
+    </div>
+
+    <div class="about-us__slider">
+      <!-- PREV -->
+      <button
+        class="about-us__button about-us__button--prev"
+        type="button"
+        aria-label="Попередній слайд"
+      >
+        <svg class="about-us__arrow" width="32" height="32" aria-hidden="true">
+          <use href="./img/icons.svg#arrow_backicon"></use>
+        </svg>
+      </button>
+
+      <!-- SWIPER -->
+      <div class="swiper about-us__swiper">
+        <div class="swiper-wrapper">
+          <!-- SLIDE 1 -->
+          <div class="swiper-slide about-us__slide">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./img/About-us/Mobile/about-us-mobile.webp    1x,
+                  ./img/About-us/Mobile/about-us-mobile@2x.webp 2x
+                "
+              />
+
+              <source
+                media="(max-width: 1439px)"
+                srcset="
+                  ./img/About-us/Tablet/about-us-tablet.webp    1x,
+                  ./img/About-us/Tablet/about-us-tablet@2x.webp 2x
+                "
+              />
+
+              <img
+                class="about-us__image"
+                src="./img/About-us/Desktop/about-us-desktop.webp"
+                srcset="
+                  ./img/About-us/Desktop/about-us-desktop.webp    1x,
+                  ./img/About-us/Desktop/about-us-desktop@2x.webp 2x
+                "
+                alt="Кондитер готує десерти"
+              />
+            </picture>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="swiper-slide about-us__slide">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./img/About-us/Mobile/about-us-mobile2.webp    1x,
+                  ./img/About-us/Mobile/about-us-mobile2@2x.webp 2x
+                "
+              />
+
+              <source
+                media="(max-width: 1439px)"
+                srcset="
+                  ./img/About-us/Tablet/about-us-tablet2.webp    1x,
+                  ./img/About-us/Tablet/about-us-tablet2@2x.webp 2x
+                "
+              />
+
+              <img
+                class="about-us__image"
+                src="./img/About-us/Desktop/about-us-desktop2.webp"
+                srcset="
+                  ./img/About-us/Desktop/about-us-desktop2.webp    1x,
+                  ./img/About-us/Desktop/about-us-desktop2@2x.webp 2x
+                "
+                alt="Команда кондитерів"
+              />
+            </picture>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="swiper-slide about-us__slide">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./img/About-us/Mobile/about-us-mobile3.webp    1x,
+                  ./img/About-us/Mobile/about-us-mobile3@2x.webp 2x
+                "
+              />
+
+              <source
+                media="(max-width: 1439px)"
+                srcset="
+                  ./img/About-us/Tablet/about-us-tablet3.webp    1x,
+                  ./img/About-us/Tablet/about-us-tablet3@2x.webp 2x
+                "
+              />
+
+              <img
+                class="about-us__image"
+                src="./img/About-us/Desktop/about-us-desktop3.webp"
+                srcset="
+                  ./img/About-us/Desktop/about-us-desktop3.webp    1x,
+                  ./img/About-us/Desktop/about-us-desktop3@2x.webp 2x
+                "
+                alt="Приготування десертів"
+              />
+            </picture>
+          </div>
+
+          <!-- SLIDE 4 -->
+          <div class="swiper-slide about-us__slide">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ./img/About-us/Mobile/about-us-mobile4.webp    1x,
+                  ./img/About-us/Mobile/about-us-mobile4@2x.webp 2x
+                "
+              />
+
+              <source
+                media="(max-width: 1439px)"
+                srcset="
+                  ./img/About-us/Tablet/about-us-tablet4.webp    1x,
+                  ./img/About-us/Tablet/about-us-tablet4@2x.webp 2x
+                "
+              />
+
+              <img
+                class="about-us__image"
+                src="./img/About-us/Desktop/about-us-desktop4.webp"
+                srcset="
+                  ./img/About-us/Desktop/about-us-desktop4.webp    1x,
+                  ./img/About-us/Desktop/about-us-desktop4@2x.webp 2x
+                "
+                alt="Десерти Солодкої Майстерні"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEXT -->
+      <button
+        class="about-us__button about-us__button--next"
+        type="button"
+        aria-label="Наступний слайд"
+      >
+        <svg class="about-us__arrow" width="32" height="32" aria-hidden="true">
+          <use href="./img/icons.svg#arrow_forwardicon"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="about-us__pagination"></div>
+  </div>
 </section>

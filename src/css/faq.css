@@ -22,14 +22,15 @@
   justify-content: space-between;
   gap: 24px;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 .faq-ac-header-text {
-  flex: 1; /* текст займає весь вільний простір */
+  flex: 1;
   margin: 0;
 }
 .faq-ac-trigger {
-  flex-shrink: 0; /* кнопка не стискається */
-  width: auto; /* замість width: 100% */
+  flex-shrink: 0;
+  width: auto;
   background: none;
   border: none;
   padding: 0;

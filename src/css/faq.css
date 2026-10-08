@@ -1,26 +1,43 @@
+.faq-title {
+  margin-bottom: 40px;
+  color: var(--Color-Scheme-1-Text, #080c0c);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2; /* 43.2px */
+  letter-spacing: -0.01em;
+}
 /* Accordion styles */
 .faq-ac {
-  border-top: 2px solid #000;
+  border-top: var(--Stroke-Divider-Width, 2px) solid
+    var(--Color-Scheme-1-Border, #080c0c);
+  padding-top: 20px;
 }
 .faq-ac:last-child {
-  border-bottom: 2px solid #000;
+  border-bottom: var(--Stroke-Divider-Width, 2px) solid
+    var(--Color-Scheme-1-Border, #080c0c);
+}
+.faq-ac-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+}
+.faq-ac-header-text {
+  flex: 1; /* текст займає весь вільний простір */
+  margin: 0;
+}
+.faq-ac-trigger {
+  flex-shrink: 0; /* кнопка не стискається */
+  width: auto; /* замість width: 100% */
+  background: none;
+  border: none;
+  padding: 0;
 }
 .faq-ac-panel {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
-}
-
-.faq-ac-trigger {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
 }
 
 .faq-ac-trigger svg {
@@ -29,8 +46,27 @@
   transform: rotate(0deg);
   transform-origin: center;
 }
+.faq-ac-text {
+  color: var(--Color-Scheme-1-Text, #080c0c);
+  font-size: var(--Text-Sizes-Text-Regular, 16px);
+  font-weight: 400;
+  line-height: 1.5; /* 24px */
+  padding-bottom: 24px;
+}
 
 .faq-ac.is-active .faq-ac-trigger svg {
   transform: rotate(180deg);
 }
 /* Accordion styles */
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1440px) {
+  .faq-container {
+    max-width: 865px;
+  }
+  .faq-title {
+    font-size: 48px;
+    margin-bottom: 80px;
+  }
+}

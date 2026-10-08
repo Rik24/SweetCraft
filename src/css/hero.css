@@ -6,7 +6,6 @@
         url(../img/hero/Mobile/hero-mobile.webp) 1x,
         url(../img/hero/Mobile/hero-mobile@2x.webp) 2x
       );
-    background-color: #d9d9d9;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -105,10 +104,6 @@
 
   .hero-title {
     font-size: 56px;
-    width: 1000px;
-  }
-
-  .hero-title {
     width: 768px;
   }
 

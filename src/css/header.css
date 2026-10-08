@@ -29,15 +29,19 @@
 .header-container {
   width: 100%;
   max-width: 375px;
-  padding-left: 20px;
-  padding-right: 20px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
   margin-left: auto;
   margin-right: auto;
 }
 
 .header {
-  padding-top: 12px;
-  padding-bottom: 12px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
 }
 
 .header-nav {
@@ -53,8 +57,10 @@
 }
 
 .header-logo-svg {
-  width: 145px;
-  height: 34px;
+
+  width: 146px;
+  height: 31px;
+
 }
 
 .header-list {
@@ -67,7 +73,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
 }
 
 .header-burger-btn-svg {
@@ -77,7 +82,8 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .header-burger-btn {
@@ -87,21 +93,21 @@
   .header-list {
     display: flex;
     align-items: center;
-    gap: 16px;
   }
 
   .header-list-item {
     white-space: nowrap;
     flex-shrink: 0;
-    font-weight: 400;
   }
 
   .header-list-item:not(:last-child) .header-item-link {
     position: relative;
     display: inline-flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.2;
     color: var(--color-neutral-darkest);
     transition: color 200ms ease;
   }
@@ -135,13 +141,14 @@
   }
 
   .header-list-item:last-child .header-item-link {
-    width: 130px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-wewak);
     color: var(--color-neutral-darkest);
     border-radius: 50px;
+    font-weight: 700;
+    line-height: 1.2;
     white-space: nowrap;
     transition:
       background-color 200ms ease,
@@ -174,12 +181,12 @@
   }
 
   .header-list-item:not(:last-child) .header-item-link {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .header-list-item:last-child .header-item-link {
-    padding: 8px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
 
@@ -187,8 +194,8 @@
   .header-container {
     width: 100%;
     max-width: 1440px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding-left: 80px;
+    padding-right: 80px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -199,12 +206,10 @@
 
   .header-list-item:not(:last-child) .header-item-link {
     font-size: 16px;
-    font-weight: 500;
   }
 
   .header-list-item:last-child .header-item-link {
-    padding: 8px 20px;
+    padding: 10px 24px;
     font-size: 16px;
-    font-weight: 500;
   }
 }

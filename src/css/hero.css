@@ -2,16 +2,11 @@
   .hero {
     padding: 169px 0;
     background-image:
-      linear-gradient(
-        180deg,
-        rgba(217, 217, 217, 0.5) 0%,
-        rgba(217, 217, 217, 0.5) 100%
-      ),
       image-set(
         url(../img/hero/Mobile/hero-mobile.webp) 1x,
         url(../img/hero/Mobile/hero-mobile@2x.webp) 2x
       );
-    background-size: cover;
+    background-color: #d9d9d9;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -80,9 +75,6 @@
       url(../img/hero/Tablet/hero-tablet.webp) 1x,
       url(../img/hero/Tablet/hero-tablet@2x.webp) 2x
     );
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   .hero-title {
@@ -109,9 +101,6 @@
       url(../img/hero/Desktop/hero-desktop.webp) 1x,
       url(../img/hero/Desktop/hero-desktop@2x.webp) 2x
     );
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   .hero-title {

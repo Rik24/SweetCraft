@@ -1,0 +1,194 @@
+.about-title {
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.about-description {
+  max-width: 768px;
+  margin: 0 auto 40px;
+
+  font-size: 18px;
+  text-align: center;
+}
+
+.about-us__slider {
+  position: relative;
+  width: 100%;
+}
+
+.about-us__swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-us__slide {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.about-us__slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.about-us__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ==============================
+   Mobile
+   ============================== */
+
+@media screen and (max-width: 767px) {
+  .about-us__swiper {
+    overflow: visible;
+  }
+
+  .about-us__swiper .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    transform: none !important;
+  }
+
+  .about-us__swiper .swiper-slide {
+    width: 335px !important;
+    height: 248px;
+    flex-shrink: 0;
+  }
+
+  .about-us__image {
+    width: 335px;
+    height: 248px;
+  }
+
+  .about-us__button,
+  .about-us__pagination {
+    display: none;
+  }
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media screen and (min-width: 768px) {
+  .about-us__swiper .swiper-slide {
+    width: 340px !important;
+    height: 252px;
+  }
+
+  .about-us__image {
+    width: 340px;
+    height: 252px;
+  }
+
+  .about-us__button {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: 1px solid var(--color-neutral-darkest);
+    border-radius: 50%;
+
+    background-color: var(--color-scheme-1-background);
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease;
+  }
+
+  .about-us__button--prev {
+    left: -20px;
+  }
+
+  .about-us__button--next {
+    right: -20px;
+  }
+
+  .about-us__arrow {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    fill: none;
+    stroke: var(--color-neutral-darkest);
+  }
+
+  .about-us__button:hover:not(:disabled),
+  .about-us__button:focus-visible:not(:disabled) {
+    background-color: var(--color-wewak);
+  }
+
+  .about-us__button:disabled {
+    border-color: var(--color-neutral-light);
+    background-color: var(--color-scheme-1-background);
+    cursor: default;
+  }
+
+  .about-us__button:disabled .about-us__arrow {
+    stroke: var(--color-neutral-light);
+  }
+
+  .about-us__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 24px;
+  }
+
+  .about-us__pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+
+    margin: 0 !important;
+
+    border-radius: 50%;
+
+    background-color: var(--color-neutral-darkest);
+    opacity: 0.3;
+
+    cursor: pointer;
+  }
+
+  .about-us__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+}
+
+/* ==============================
+   Desktop
+   ============================== */
+
+@media screen and (min-width: 1440px) {
+  .about-us__swiper .swiper-slide {
+    width: 644px !important;
+    height: 478px;
+  }
+
+  .about-us__image {
+    width: 644px;
+    height: 478px;
+  }
+}

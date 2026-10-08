@@ -1,31 +1,19 @@
-.about-us {
-  overflow: hidden;
-}
-
-.about-us__header {
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto 40px;
+.about-title {
+  margin: 0 0 24px;
   text-align: center;
 }
 
-.about-us__title {
-  margin: 0 0 24px;
-}
+.about-description {
+  max-width: 768px;
+  margin: 0 auto 40px;
 
-.about-us__description {
-  margin: 0;
-  font-family: var(--font-family);
   font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--color-scheme-1-text);
+  text-align: center;
 }
 
 .about-us__slider {
   position: relative;
   width: 100%;
-  margin: 0 auto;
 }
 
 .about-us__swiper {
@@ -56,7 +44,7 @@
    Mobile
    ============================== */
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .about-us__swiper {
     overflow: visible;
   }
@@ -65,6 +53,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
     transform: none !important;
   }
 
@@ -79,10 +68,7 @@
     height: 248px;
   }
 
-  .about-us__button {
-    display: none;
-  }
-
+  .about-us__button,
   .about-us__pagination {
     display: none;
   }
@@ -92,11 +78,7 @@
    Tablet
    ============================== */
 
-@media only screen and (min-width: 768px) {
-  .about-us__swiper {
-    overflow: hidden;
-  }
-
+@media screen and (min-width: 768px) {
   .about-us__swiper .swiper-slide {
     width: 340px !important;
     height: 252px;
@@ -150,8 +132,6 @@
 
     fill: none;
     stroke: var(--color-neutral-darkest);
-
-    transition: stroke 250ms ease;
   }
 
   .about-us__button:hover:not(:disabled),
@@ -190,15 +170,10 @@
     opacity: 0.3;
 
     cursor: pointer;
-
-    transition:
-      opacity 250ms ease,
-      transform 250ms ease;
   }
 
   .about-us__pagination .swiper-pagination-bullet-active {
     opacity: 1;
-    transform: scale(1.2);
   }
 }
 
@@ -206,7 +181,7 @@
    Desktop
    ============================== */
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .about-us__swiper .swiper-slide {
     width: 644px !important;
     height: 478px;

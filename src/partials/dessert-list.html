@@ -1,10 +1,32 @@
-<section class="section" id="sweets">
+<section class="section" id="desserts">
   <div class="container">
     <h2 class="section-title dessert-section-title">Солодощі</h2>
-    <p class="dessert-section-text">
-      Спробуйте наші смачні десерти, які вас здивують!
-    </p>
-    <ul class="dessert-type"></ul>
+    <div class="dessert-controls">
+      <p class="dessert-section-text">
+        Спробуйте наші смачні десерти, які вас здивують!
+      </p>
+
+      <div class="category-wrap">
+        <button type="button" class="category-toggle">
+          <span class="current-category">Select one...</span>
+          <svg class="category-toggle-icon" width="24" height="24">
+            <use href="/img/icons.svg#keyboard_arrow_downicon"></use>
+          </svg>
+        </button>
+        <ul class="category-list">
+          <li>
+            <button
+              type="button"
+              class="category-select-btn is-active"
+              data-id="select-all"
+            >
+              Всі десерти
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <ul class="dessert-list"></ul>
     <span class="loader"></span>
     <button type="button" class="load-more-btn">Завантажити ще</button>

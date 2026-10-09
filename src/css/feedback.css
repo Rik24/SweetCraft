@@ -1,0 +1,146 @@
+.feedback-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.feedback-text {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 32px;
+}
+
+.swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slide {
+  border: 2px solid;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.swiper-slide .rating {
+  margin-bottom: 24px;
+  justify-content: flex-start;
+}
+
+.feedback .star-empty,
+.feedback .star-half,
+.feedback .star-filled {
+  fill: black !important;
+}
+
+.feedback-description {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.feedback-name {
+  margin-top: auto;
+  font-weight: 600;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback-nav-list {
+  display: flex;
+  gap: 16px;
+}
+
+.feedback-nav-btn.swiper-button-prev,
+.feedback-nav-btn.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-scheme-1-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-nav-btn:focus-visible {
+  background-color: var(--color-wewak);
+}
+
+.feedback-nav-btn:active {
+  background-color: var(--color-wewak-dark);
+}
+
+.feedback-nav-icon {
+  stroke: var(--color-scheme-1-border);
+}
+
+.nav-wrapper .swiper-pagination.swiper-pagination-bullets {
+  position: static;
+  inset: auto;
+  width: auto;
+  transform: none !important;
+}
+
+.nav-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color-scheme-1-border);
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-wrapper {
+    margin-bottom: 48px;
+  }
+
+  .swiper-slide {
+    padding: 16px;
+  }
+
+  .swiper-pagination {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .feedback-slider {
+    position: relative;
+  }
+
+  .feedback-nav-btn {
+    position: absolute;
+    top: calc(50% - 30px);
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .swiper-button-prev {
+    left: -30px; /* наполовину за краем слайдера; 0 или положительное значение, чтобы внутри */
+  }
+
+  .swiper-button-next {
+    right: -30px;
+  }
+
+  .feedback-nav-btn {
+    background-color: var(--color-scheme-1-foreground);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper-slide {
+    padding: 32px;
+  }
+  .feedback-description {
+    margin-bottom: 48px;
+  }
+}
+
+@media (hover: hover) {
+  .feedback-nav-btn:hover {
+    background-color: var(--color-wewak);
+  }
+}

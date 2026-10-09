@@ -57,6 +57,10 @@
   gap: 16px;
 }
 
+.feedback-nav-btn {
+  background-color: var(--color-scheme-1-foreground);
+}
+
 .feedback-nav-btn.swiper-button-prev,
 .feedback-nav-btn.swiper-button-next {
   width: 48px;
@@ -69,16 +73,20 @@
   justify-content: center;
 }
 
-.feedback-nav-btn:focus-visible {
-  background-color: var(--color-wewak);
-}
-
 .feedback-nav-btn:active {
   background-color: var(--color-wewak-dark);
 }
 
+.feedback-nav-btn:disabled {
+  color: #c6cdcd;
+  border-color: #c6cdcd;
+  background-color: #ecf3f3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .feedback-nav-icon {
-  stroke: var(--color-scheme-1-border);
+  stroke: currentColor;
 }
 
 .nav-wrapper .swiper-pagination.swiper-pagination-bullets {
@@ -118,15 +126,11 @@
   }
 
   .swiper-button-prev {
-    left: -30px; /* наполовину за краем слайдера; 0 или положительное значение, чтобы внутри */
+    left: -28px;
   }
 
   .swiper-button-next {
-    right: -30px;
-  }
-
-  .feedback-nav-btn {
-    background-color: var(--color-scheme-1-foreground);
+    right: -28px;
   }
 }
 
@@ -142,5 +146,12 @@
 @media (hover: hover) {
   .feedback-nav-btn:hover {
     background-color: var(--color-wewak);
+  }
+  .feedback-nav-btn:focus-visible {
+    background-color: var(--color-wewak);
+  }
+
+  .feedback-nav-btn:active {
+    background-color: var(--color-wewak-dark);
   }
 }

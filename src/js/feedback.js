@@ -11,11 +11,11 @@ import 'izitoast/dist/css/iziToast.min.css';
 const swiperOptions = {
   modules: [Navigation, Pagination],
   grabCursor: true,
+  spaceBetween: 20,
   slidesPerView: 1,
 
   breakpoints: {
-    375: { slidesPerView: 1, spaceBetween: 20 },
-    768: { slidesPerView: 3, spaceBetween: 30 },
+    768: { slidesPerView: 3, spaceBetween: 24 },
   },
 
   pagination: {

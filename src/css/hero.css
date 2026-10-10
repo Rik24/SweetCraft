@@ -1,11 +1,10 @@
 @media screen {
   .hero {
     padding: 169px 0;
-    background-image:
-      image-set(
-        url(../img/hero/Mobile/hero-mobile.webp) 1x,
-        url(../img/hero/Mobile/hero-mobile@2x.webp) 2x
-      );
+    background-image: image-set(
+      url(/img/hero/Mobile/hero-mobile.webp) 1x,
+      url(/img/hero/Mobile/hero-mobile@2x.webp) 2x
+    );
     background-color: #d9d9d9;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,8 +71,8 @@
   .hero {
     padding: 325px 0;
     background-image: image-set(
-      url(../img/hero/Tablet/hero-tablet.webp) 1x,
-      url(../img/hero/Tablet/hero-tablet@2x.webp) 2x
+      url(/img/hero/Tablet/hero-tablet.webp) 1x,
+      url(/img/hero/Tablet/hero-tablet@2x.webp) 2x
     );
   }
 
@@ -98,8 +97,8 @@
   .hero {
     padding: 306px 0;
     background-image: image-set(
-      url(../img/hero/Desktop/hero-desktop.webp) 1x,
-      url(../img/hero/Desktop/hero-desktop@2x.webp) 2x
+      url(/img/hero/Desktop/hero-desktop.webp) 1x,
+      url(/img/hero/Desktop/hero-desktop@2x.webp) 2x
     );
   }
 

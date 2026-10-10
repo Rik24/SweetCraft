@@ -46,7 +46,7 @@
   font-weight: 600;
 }
 
-.nav-wrapper {
+.feedback-nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,14 +89,15 @@
   stroke: currentColor;
 }
 
-.nav-wrapper .feedback-swiper-pagination.swiper-pagination-bullets {
+.feedback-nav-wrapper .feedback-swiper-pagination.swiper-pagination-bullets {
   position: static;
   inset: auto;
   width: auto;
   transform: none !important;
 }
 
-.nav-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.feedback-nav-wrapper
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color-scheme-1-border);
 }
 

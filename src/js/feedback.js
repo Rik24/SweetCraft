@@ -19,7 +19,7 @@ const swiperOptions = {
   },
 
   pagination: {
-    el: '.swiper-pagination',
+    el: '.feedback-swiper-pagination',
     dynamicBullets: true,
     clickable: true,
   },
@@ -56,7 +56,8 @@ const swiperOptions = {
   },
 };
 
-const createFeedbackSwiper = () => new Swiper('.swiper', swiperOptions);
+const createFeedbackSwiper = () =>
+  new Swiper('.feedback-swiper', swiperOptions);
 
 // CONSTANTS
 let page = 1;
@@ -64,7 +65,7 @@ const limit = 10;
 let totalPages = null;
 
 // REFS
-const swiperEl = document.querySelector('.swiper-wrapper');
+const swiperEl = document.querySelector('.feedback-swiper-wrapper');
 
 document.addEventListener('DOMContentLoaded', initFeedbacks);
 
@@ -114,57 +115,57 @@ function createFeedbacksMarkup(author, description, ratingClass) {
             <div class="star-container">
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/icons.svg#star-empty"></use>
+                  <use href="/img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/icons.svg#star-half"></use>
+                  <use href="/img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/icons.svg#star-filled"></use>
+                  <use href="/img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/icons.svg#star-empty"></use>
+                  <use href="/img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/icons.svg#star-half"></use>
+                  <use href="/img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/icons.svg#star-filled"></use>
+                  <use href="/img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/icons.svg#star-empty"></use>
+                  <use href="/img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/icons.svg#star-half"></use>
+                  <use href="/img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/icons.svg#star-filled"></use>
+                  <use href="/img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/icons.svg#star-empty"></use>
+                  <use href="/img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/icons.svg#star-half"></use>
+                  <use href="/img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/icons.svg#star-filled"></use>
+                  <use href="/img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/icons.svg#star-empty"></use>
+                  <use href="/img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/icons.svg#star-half"></use>
+                  <use href="/img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/icons.svg#star-filled"></use>
+                  <use href="/img/icons.svg#star-filled"></use>
                 </svg>
               </div>
             </div>

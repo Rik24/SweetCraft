@@ -37,7 +37,7 @@ const swiperOptions = {
       } = swiper;
       const isNearEnd = realIndex + 1 >= length - 2;
 
-      if (isNearEnd || page >= totalPages) {
+      if (!isNearEnd || page >= totalPages) {
         return;
       }
       try {
@@ -109,7 +109,7 @@ function renderFeedbacks(feedbacks) {
 }
 
 function createFeedbacksMarkup(author, description, ratingClass) {
-  return `<div class="swiper-slide">
+  return `<div class="feedback-swiper-slide swiper-slide">
       <div class="rating ${ratingClass}">
             <div class="star-container">
               <div class="star">

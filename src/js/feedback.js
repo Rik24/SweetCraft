@@ -4,36 +4,53 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import axios from 'axios';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 // SWIPER
 const swiperOptions = {
   modules: [Navigation, Pagination],
   grabCursor: true,
+  spaceBetween: 20,
   slidesPerView: 1,
+
   breakpoints: {
-    375: { slidesPerView: 1, spaceBetween: 20 },
-    768: { slidesPerView: 3, spaceBetween: 30 },
+    768: { slidesPerView: 3, spaceBetween: 24 },
   },
+
   pagination: {
     el: '.swiper-pagination',
     dynamicBullets: true,
     clickable: true,
   },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
   on: {
     async slideChange(swiper) {
       const {
         realIndex,
         slides: { length },
       } = swiper;
-      if (realIndex + 1 >= length - 2 && page < totalPages) {
+      const isNearEnd = realIndex + 1 >= length - 2;
+
+      if (!isNearEnd || page >= totalPages) {
+        return;
+      }
+      try {
         page += 1;
         const { feedbacks } = await getFeedbacks(page, limit);
         renderFeedbacks(feedbacks);
         swiper.update();
+      } catch (err) {
+        iziToast.error({
+          title: 'Error',
+          message: `Помилка отримання Фiдбекiв пiд час довантаження ${err}`,
+        });
+        console.log(`Помилка отримання Фiдбекiв пiд час довантаження ${err}`);
       }
     },
   },
@@ -52,10 +69,18 @@ const swiperEl = document.querySelector('.swiper-wrapper');
 document.addEventListener('DOMContentLoaded', initFeedbacks);
 
 async function initFeedbacks() {
-  const { feedbacks, total } = await getFeedbacks(page, limit);
-  totalPages = Math.ceil(total / limit);
-  renderFeedbacks(feedbacks);
-  createFeedbackSwiper();
+  try {
+    const { feedbacks, total } = await getFeedbacks(page, limit);
+    totalPages = Math.ceil(total / limit);
+    renderFeedbacks(feedbacks);
+    createFeedbackSwiper();
+  } catch (err) {
+    iziToast.error({
+      title: 'Error',
+      message: `Помилка отримання Фiдбекiв пiд час ініціалізації ${err}`,
+    });
+    console.log(`Помилка отримання Фiдбекiв пiд час ініціалізації ${err}`);
+  }
 }
 
 // API FUNCTIONS
@@ -84,62 +109,62 @@ function renderFeedbacks(feedbacks) {
 }
 
 function createFeedbacksMarkup(author, description, ratingClass) {
-  return `<div class="swiper-slide">
+  return `<div class="feedback-swiper-slide swiper-slide">
       <div class="rating ${ratingClass}">
             <div class="star-container">
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/star-rating.icons.svg#star-empty"></use>
+                  <use href="../img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/star-rating.icons.svg#star-half"></use>
+                  <use href="../img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/star-rating.icons.svg#star-filled"></use>
+                  <use href="../img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/star-rating.icons.svg#star-empty"></use>
+                  <use href="../img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/star-rating.icons.svg#star-half"></use>
+                  <use href="../img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/star-rating.icons.svg#star-filled"></use>
+                  <use href="../img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/star-rating.icons.svg#star-empty"></use>
+                  <use href="../img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/star-rating.icons.svg#star-half"></use>
+                  <use href="../img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/star-rating.icons.svg#star-filled"></use>
+                  <use href="../img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/star-rating.icons.svg#star-empty"></use>
+                  <use href="../img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/star-rating.icons.svg#star-half"></use>
+                  <use href="../img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/star-rating.icons.svg#star-filled"></use>
+                  <use href="../img/icons.svg#star-filled"></use>
                 </svg>
               </div>
               <div class="star">
                 <svg class="star-empty">
-                  <use href="../img/star-rating.icons.svg#star-empty"></use>
+                  <use href="../img/icons.svg#star-empty"></use>
                 </svg>
                 <svg class="star-half">
-                  <use href="../img/star-rating.icons.svg#star-half"></use>
+                  <use href="../img/icons.svg#star-half"></use>
                 </svg>
                 <svg class="star-filled">
-                  <use href="../img/star-rating.icons.svg#star-filled"></use>
+                  <use href="../img/icons.svg#star-filled"></use>
                 </svg>
               </div>
             </div>

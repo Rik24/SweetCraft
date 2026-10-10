@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # * файл з дз
-pullrequests-lists.txt
+pullrequests-list.txt

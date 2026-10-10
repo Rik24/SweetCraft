@@ -26,9 +26,9 @@
     <!-- GOOGLE FONTS -->
 
     <script type="module" crossorigin src="/SweetCraft/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/SweetCraft/assets/vendor-D8buL3hb.js">
-    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/vendor-bO_biMZ1.css">
-    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-DdhiiyAR.css">
+    <link rel="modulepreload" crossorigin href="/SweetCraft/assets/vendor-CXnjcTlo.js">
+    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/vendor-Bt0doBzI.css">
+    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-BQcf5qHM.css">
   </head>
   <body>
     <header class="header">
@@ -44,7 +44,7 @@
       <!-- Menu -->
       <ul class="header-list">
         <li class="header-list-item">
-          <a href="#sweets" class="header-item-link">Солодощі</a>
+          <a href="#desserts" class="header-item-link">Солодощі</a>
         </li>
         <li class="header-list-item">
           <a href="#about" class="header-item-link">Про нас</a>
@@ -83,7 +83,41 @@
   </div>
 </section>
 
-      
+      <section class="section" id="desserts">
+  <div class="container">
+    <h2 class="section-title dessert-section-title">Солодощі</h2>
+    <div class="dessert-controls">
+      <p class="dessert-section-text">
+        Спробуйте наші смачні десерти, які вас здивують!
+      </p>
+
+      <div class="category-wrap">
+        <button type="button" class="category-toggle">
+          <span class="current-category">Select one...</span>
+          <svg class="category-toggle-icon" width="24" height="24">
+            <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#keyboard_arrow_downicon"></use>
+          </svg>
+        </button>
+        <ul class="category-list">
+          <li>
+            <button
+              type="button"
+              class="category-select-btn is-active"
+              data-id="select-all"
+            >
+              Всі десерти
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="dessert-list"></ul>
+    <span class="loader"></span>
+    <button type="button" class="load-more-btn">Завантажити ще</button>
+  </div>
+</section>
+
       <section class="section about-us" id="about">
   <div class="container about-us-container">
     <h2 class="about-title section-title">Про нас</h2>
@@ -540,8 +574,81 @@
 </footer>
 
 
-    
-    
+    <div class="dessert-details-modal-backdrop">
+  <div class="dessert-details-modal">
+    <button
+      type="button"
+      class="dessert-details-close-btn"
+      aria-label="Закрити вікно"
+    >
+      <svg class="dessert-details-close-icon" width="24" height="24">
+        <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#closeicon"></use>
+      </svg>
+    </button>
+
+    <span class="loader dessert-details-loader"></span>
+    <div class="dessert-details-content"></div>
+  </div>
+</div>
+
+    <div class="order-modal-backdrop">
+  <div class="order-modal">
+    <button type="button" class="order-close-btn" aria-label="Закрити вікно">
+      <svg class="order-close-icon" width="24" height="24">
+        <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#closeicon"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-title">Офомлення замовлення</h2>
+
+    <form class="order-form">
+      <label class="order-field">
+        <span class="order-label">Ім'я*</span>
+        <input
+          class="order-input"
+          type="text"
+          name="name"
+          placeholder="Вікторія"
+          autocomplete="name"
+          required
+          minlength="2"
+          maxlength="48"
+        />
+      </label>
+
+      <label class="order-field">
+        <span class="order-label">Телефон*</span>
+        <input
+          class="order-input"
+          type="tel"
+          name="phone"
+          placeholder="38 0__ _______"
+          autocomplete="tel"
+          required
+          pattern="[0-9 ]{12,16}"
+          title="12 цифр, наприклад 380961234568"
+        />
+      </label>
+
+      <label class="order-field">
+        <span class="order-label">Коментар*</span>
+        <textarea
+          class="order-input order-textarea"
+          name="comment"
+          placeholder="Ваш коментар"
+          required
+          minlength="2"
+          maxlength="256"
+        ></textarea>
+      </label>
+
+      <button type="submit" class="order-submit-btn">Надіслати заявку</button>
+    </form>
+
+    <span class="loader order-loader"></span>
+  </div>
+</div>
+
 
     
 

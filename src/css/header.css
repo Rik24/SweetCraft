@@ -30,18 +30,16 @@
   width: 100%;
   max-width: 375px;
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   margin-left: auto;
   margin-right: auto;
 }
 
 .header {
-
-  padding-top: 16px;
-  padding-bottom: 16px;
-
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-nav {
@@ -56,13 +54,6 @@
   flex-shrink: 0;
 }
 
-.header-logo-svg {
-
-  width: 146px;
-  height: 31px;
-
-}
-
 .header-list {
   display: none;
 }
@@ -73,6 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 12px;
 }
 
 .header-burger-btn-svg {
@@ -82,8 +74,7 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0;
   }
 
   .header-burger-btn {
@@ -104,9 +95,9 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-weight: 600;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-weight: 400;
     line-height: 1.2;
     color: var(--color-neutral-darkest);
     transition: color 200ms ease;
@@ -181,12 +172,16 @@
   }
 
   .header-list-item:not(:last-child) .header-item-link {
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
   }
 
   .header-list-item:last-child .header-item-link {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
   }
 }
 
@@ -194,8 +189,8 @@
   .header-container {
     width: 100%;
     max-width: 1440px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 64px;
+    padding-right: 64px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -206,10 +201,17 @@
 
   .header-list-item:not(:last-child) .header-item-link {
     font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .header-list-item:last-child .header-item-link {
-    padding: 10px 24px;
+    padding: 8px 20px;
     font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0;
   }
 }

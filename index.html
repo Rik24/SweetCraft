@@ -28,15 +28,15 @@
     <script type="module" crossorigin src="/SweetCraft/index.js"></script>
     <link rel="modulepreload" crossorigin href="/SweetCraft/assets/vendor-CXnjcTlo.js">
     <link rel="stylesheet" crossorigin href="/SweetCraft/assets/vendor-Bt0doBzI.css">
-    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-BQcf5qHM.css">
+    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-CU2Opelt.css">
   </head>
   <body>
     <header class="header">
   <div class="container header-container">
     <nav class="header-nav">
       <!-- Logo -->
-      <a href="#" class="header-logo">
-        <svg class="header-logo-svg" width="146" height="31">
+      <a href="/index.html" class="header-logo">
+        <svg class="header-logo-svg" width="147" height="33">
           <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#logoicon"></use>
         </svg>
       </a>
@@ -62,7 +62,7 @@
 
       <!-- Mobile menu button -->
       <button type="button" class="header-burger-btn" aria-label="Открыть меню">
-        <svg class="header-burger-btn-svg" width="32" height="32">
+        <svg class="header-burger-btn-svg" width="24" height="24">
           <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#menuicon"></use>
         </svg>
       </button>
@@ -650,7 +650,63 @@
 </div>
 
 
-    
+    <!-- Мобильное меню (по умолчанию может быть открыто или закрыто классом is-open) -->
+<div class="mobile-menu is-open">
+  <div class="mobile-menu-container">
+    <!-- Шапка мобильного меню с логотипом и крестиком -->
+    <div class="mobile-menu-header">
+      <a href="./index.html" class="mobile-menu-logo">
+        <!-- Вставьте ваш SVG логотипа -->
+        <svg class="mobile-menu-logo-svg" width="146" height="33">
+          <use href="/SweetCraft/assets/icons-0lH9uKN_.svg#logoicon"></use>
+        </svg>
+      </a>
+
+      <button
+        type="button"
+        class="mobile-menu-close-btn"
+        aria-label="Close menu"
+      >
+        <svg
+          class="mobile-menu-close-svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Основная навигация меню -->
+    <nav class="mobile-menu-nav">
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a href="#sweets" class="mobile-menu-link">Солодощі</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#about" class="mobile-menu-link">Про нас</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#reviews" class="mobile-menu-link">Відгуки</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#faq" class="mobile-menu-link">Часті питання</a>
+        </li>
+      </ul>
+
+      <!-- Кнопка действия -->
+      <a href="#shop" class="mobile-menu-btn">До покупок</a>
+    </nav>
+  </div>
+</div>
+
 
   </body>
 </html>

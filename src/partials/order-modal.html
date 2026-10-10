@@ -1,0 +1,57 @@
+<div class="order-modal-backdrop">
+  <div class="order-modal">
+    <button type="button" class="order-close-btn" aria-label="Закрити вікно">
+      <svg class="order-close-icon" width="24" height="24">
+        <use href="/img/icons.svg#closeicon"></use>
+      </svg>
+    </button>
+
+    <h2 class="order-title">Офомлення замовлення</h2>
+
+    <form class="order-form">
+      <label class="order-field">
+        <span class="order-label">Ім'я*</span>
+        <input
+          class="order-input"
+          type="text"
+          name="name"
+          placeholder="Вікторія"
+          autocomplete="name"
+          required
+          minlength="2"
+          maxlength="48"
+        />
+      </label>
+
+      <label class="order-field">
+        <span class="order-label">Телефон*</span>
+        <input
+          class="order-input"
+          type="tel"
+          name="phone"
+          placeholder="38 0__ _______"
+          autocomplete="tel"
+          required
+          pattern="[0-9 ]{12,16}"
+          title="12 цифр, наприклад 380961234568"
+        />
+      </label>
+
+      <label class="order-field">
+        <span class="order-label">Коментар*</span>
+        <textarea
+          class="order-input order-textarea"
+          name="comment"
+          placeholder="Ваш коментар"
+          required
+          minlength="2"
+          maxlength="256"
+        ></textarea>
+      </label>
+
+      <button type="submit" class="order-submit-btn">Надіслати заявку</button>
+    </form>
+
+    <span class="loader order-loader"></span>
+  </div>
+</div>

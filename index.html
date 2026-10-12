@@ -28,7 +28,7 @@
     <script type="module" crossorigin src="/SweetCraft/index.js"></script>
     <link rel="modulepreload" crossorigin href="/SweetCraft/assets/vendor-D8_pSMXa.js">
     <link rel="stylesheet" crossorigin href="/SweetCraft/assets/vendor-BAQzaLDh.css">
-    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-BPOdcR6d.css">
+    <link rel="stylesheet" crossorigin href="/SweetCraft/assets/index-D1L5T-Mk.css">
   </head>
   <body>
     <header class="header">
@@ -634,7 +634,7 @@
 
     <h2 class="order-title">Офомлення замовлення</h2>
 
-    <form class="order-form">
+    <form class="order-form" novalidate>
       <label class="order-field">
         <span class="order-label">Ім'я*</span>
         <input
@@ -646,7 +646,9 @@
           required
           minlength="2"
           maxlength="48"
+          aria-describedby="order-name-error"
         />
+        <span class="order-error" id="order-name-error"></span>
       </label>
 
       <label class="order-field">
@@ -660,7 +662,9 @@
           required
           pattern="[0-9 ]{12,16}"
           title="12 цифр, наприклад 380961234568"
+          aria-describedby="order-phone-error"
         />
+        <span class="order-error" id="order-phone-error"></span>
       </label>
 
       <label class="order-field">
@@ -672,7 +676,12 @@
           required
           minlength="2"
           maxlength="256"
+          aria-describedby="order-comment-error"
         ></textarea>
+        <span
+          class="order-error order-error-large"
+          id="order-comment-error"
+        ></span>
       </label>
 
       <button type="submit" class="order-submit-btn">Надіслати заявку</button>
